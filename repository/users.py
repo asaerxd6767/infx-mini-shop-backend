@@ -3,7 +3,7 @@ from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
 
 from database import engine
-from models import User
+from models.user import User
 
 
 def get_user_by_email(email: str):
