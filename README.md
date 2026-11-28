@@ -51,8 +51,9 @@ frontend — no separate UI project.
     └── orders.py
 ```
 
-Each folder has an `__init__.py`. `models/__init__.py` imports all the tables so
-`create_all()` in `main.py` can see them; the other `__init__.py` files are empty.
+`models/__init__.py` imports all the tables so `create_all()` in `main.py` can
+see them. The other folders don't need an `__init__.py` — Python 3 treats them
+as packages automatically.
 
 One file = one job. Dependency direction:
 `routes → services → repository → database → config`. Do not put SQL in
